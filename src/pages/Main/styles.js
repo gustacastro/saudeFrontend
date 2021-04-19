@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   img {
     width: 50%;
-    height: 40%;
+    height: 50%;
   }
 
   span {

@@ -11,14 +11,14 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1100px;
   padding: 20px;
-  padding-top: 300px;
+  padding-top: 150px;
 
   .left {
     width: 50%;
     display: flex;
     justify-content: center;
     img {
-      width: 60%;
+      width: 50%;
     }
   }
 
