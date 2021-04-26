@@ -6,6 +6,8 @@ import { Route, Redirect } from 'react-router-dom';
 import mainLayout from '../pages/_layouts/main';
 import altLayout from '../pages/_layouts/alt';
 
+import { store } from '../store';
+
 export default function RouteWrapper({
   component: Component,
   admin,
@@ -13,8 +15,8 @@ export default function RouteWrapper({
   cantregisterlogin,
   ...rest
 }) {
-  const signed = false;
-  const useradmin = false;
+  const { signed } = store.getState().auth;
+  const useradmin = store.getState().auth.admin;
 
   if (!signed && admin) {
     return <Redirect to="/" />;

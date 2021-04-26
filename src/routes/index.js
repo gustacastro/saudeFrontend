@@ -6,6 +6,11 @@ import Route from './Route';
 import Main from '../pages/Main';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
+import Phones from '../pages/Phones';
+import Documents from '../pages/Documents';
+import Links from '../pages/Links';
+import Contact from '../pages/Contact';
+import Print from '../pages/Print';
 
 import error404 from '../pages/error404';
 
@@ -20,6 +25,12 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Main} />
+      <Route path="/phones" component={Phones} />
+      <Route path="/documents" component={Documents} />
+      <Route path="/links" component={Links} />
+      <Route path="/contacts" component={Contact} />
+      <Route path="/print" component={Print} />
+
       <Route path="/register" component={Signup} cantregisterlogin />
       <Route path="/login" component={Signin} cantregisterlogin />
 

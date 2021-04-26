@@ -1,9 +1,11 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
-function NormalDashboard() {
-  return <h1>Normal Dashboard</h1>;
+export default function NormalDashboard() {
+  return (
+    <Container>
+      <h1>Painel de controle</h1>
+    </Container>
+  );
 }
-
-export default NormalDashboard;
