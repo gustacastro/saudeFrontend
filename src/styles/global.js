@@ -10,6 +10,7 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+
   }
 
   *:focus {
@@ -18,33 +19,29 @@ export default createGlobalStyle`
 
   html,body, #root {
     height: 100%;
+
   }
 
   body {
     -webkit-font-smoothing: antialiased;
+
   }
 
   body, input, button {
     font: 16px 'Montserrat', sans-serif;
-    color: #4e4e50;
-    font-weight: bold;
+
   }
 
   a {
     text-decoration: none;
-    color: #4e4e50;
-    font-weight: bold;
   }
 
   ul, li {
     list-style: none;
-    font-weight: bold;
-    color: #4e4e50;
   }
 
   button {
     cursor: pointer;
-    font-weight: bold;
   }
 
 

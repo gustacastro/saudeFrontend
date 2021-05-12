@@ -11,7 +11,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1100px;
   padding: 20px;
-  padding-top: 200px;
+  padding-top: 150px;
 
   .left {
     width: 50%;
@@ -57,7 +57,7 @@ export const Container = styled.div`
     input {
       padding: 15px 15px 15px 70px;
       border: 1px solid transparent;
-      border-radius: 100px;
+      border-radius: 10px;
       transition: 0.2s;
       font-weight: bold;
       margin: 5px 0;
@@ -72,29 +72,16 @@ export const Container = styled.div`
       }
 
       &:hover {
-        border-bottom: 1px solid #0848e7;
+        border-bottom: 1px solid #2496ef;
       }
     }
 
     input:focus {
-      border: 1px solid #0848e7;
+      border: 1px solid #2496ef;
     }
 
     button {
       margin-top: 20px;
-      background: #0848e7;
-      -webkit-box-shadow: 0px 0px 5px 0px rgba(8, 72, 231, 1);
-      -moz-box-shadow: 0px 0px 5px 0px rgba(8, 72, 231, 1);
-      box-shadow: 0px 0px 5px 0px rgba(8, 72, 231, 1);
-      border: transparent;
-      padding: 10px;
-      border-radius: 100px;
-      color: #fff;
-      transition: 0.2s;
-
-      &:hover {
-        background: #0b80ed;
-      }
     }
 
     a {
@@ -105,8 +92,7 @@ export const Container = styled.div`
       transition: 0.2s;
 
       &:hover {
-        border-bottom: 1px solid blue;
-        color: #0b48ed;
+        color: #2496ef;
       }
     }
 

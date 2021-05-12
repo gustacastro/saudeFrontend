@@ -23,7 +23,7 @@ export default function Header() {
           <NavbarWrapper>
             <NavbarBrand>
               <Link to="/" className="center">
-                <span className="material-icons red">favorite</span>
+                <span className="material-icons red">masks</span>
                 Saúde
               </Link>
             </NavbarBrand>

@@ -2,9 +2,16 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
+import Card from '@material-tailwind/react/Card';
+import Image from '@material-tailwind/react/Image';
+import CardBody from '@material-tailwind/react/CardBody';
+import CardFooter from '@material-tailwind/react/CardFooter';
+import Paragraph from '@material-tailwind/react/Paragraph';
+import H2 from '@material-tailwind/react/Heading2';
+
 import api from '../../services/api';
 
-import { Container, Users } from './styles';
+import { Container, Painel } from './styles';
 
 export default function Contact() {
   const [contactA, setContact] = useState([]);
@@ -24,24 +31,22 @@ export default function Contact() {
 
   return (
     <Container>
-      <h1>Contatos</h1>
-
-      <div>
+      <H2 color="lightBlue">Contatos</H2>
+      <Painel>
         {contactA.map((info, index) => (
-          <Users key={index}>
-            <div className="separete">
-              <div>
-                <img src={info.avatar.url} alt="" />
-              </div>
-              <div className="div2">
-                <span>{info.name}</span>
-                <span>{info.phone}</span>
-                <span>{info.email}</span>
-              </div>
-            </div>
-          </Users>
+          <div key={index}>
+            <Card>
+              <Image src={info.avatar.url} alt="Card Image" rounded raised />
+              <CardBody />
+              <CardFooter>
+                <Paragraph color="gray">{info.name}</Paragraph>
+                <Paragraph color="gray">{info.phone}</Paragraph>
+                <Paragraph color="gray">{info.email}</Paragraph>
+              </CardFooter>
+            </Card>
+          </div>
         ))}
-      </div>
+      </Painel>
     </Container>
   );
 }

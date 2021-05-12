@@ -8,6 +8,9 @@ import { Form, Input, useField } from '@rocketseat/unform';
 import ReactDatepicker, { registerLocale } from 'react-datepicker';
 import el from 'date-fns/locale/pt-BR'; // register it with the name you want
 
+import H2 from '@material-tailwind/react/Heading2';
+import Button from '@material-tailwind/react/Button';
+
 import { Container } from './styles';
 
 import 'react-datepicker/dist/react-datepicker.css';
@@ -78,16 +81,22 @@ export default function Print() {
 
   return (
     <Container>
-      <h1>Imprimir colorido</h1>
+      <H2 color="lightBlue">Imprimir</H2>
       <Form autoComplete="off" onSubmit={handleSubmit}>
         <div className="hori">
           <div className="div">
             <span>Nome de quem irá retirar</span>
-            <Input name="name" type="text" />
+            <Input name="name" type="text" placeholder="Nome" />
             <span>Quantidade</span>
-            <Input name="amount" type="text" />
+            <Input name="amount" type="text" placeholder="Quantidade" />
             <span>Deseja mandar alguma mensagem?</span>
-            <Input multiline name="message" cols="40" rows="10" />
+            <Input
+              multiline
+              name="message"
+              cols="40"
+              rows="10"
+              placeholder="Mensagem"
+            />
           </div>
           <div className="div">
             <div>
@@ -100,9 +109,17 @@ export default function Print() {
             </div>
           </div>
         </div>
-        <button className="button" type="submit">
+        <Button
+          color="cyan"
+          buttonType="filled"
+          size="regular"
+          rounded={false}
+          block={false}
+          ripple="light"
+          type="submit"
+        >
           Enviar
-        </button>
+        </Button>
       </Form>
     </Container>
   );

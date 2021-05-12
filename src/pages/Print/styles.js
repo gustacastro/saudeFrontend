@@ -6,15 +6,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1300px;
   padding: 20px;
-  padding-top: 200px;
+  padding-top: 150px;
   flex-direction: column;
-
-  h1 {
-    font-size: 38px;
-    margin-bottom: 30px;
-  }
 
   Form {
     display: flex;
@@ -53,7 +48,7 @@ export const Container = styled.div`
     textarea {
       padding: 10px 20px;
       border: 1px solid transparent;
-      border-radius: 100px;
+      border-radius: 10px;
       transition: 0.2s;
       font-weight: bold;
       margin: 5px 0;
@@ -65,17 +60,17 @@ export const Container = styled.div`
       box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
       &::placeholder {
-        color: rgb(78, 78, 80, 0.6);
+        color: rgb(78, 78, 80, 0.3);
       }
 
       &:hover {
-        border-bottom: 1px solid #0848e7;
+        border-bottom: 1px solid #2496ef;
       }
     }
 
     input:focus,
     textarea:focus {
-      border: 1px solid #0848e7;
+      border: 1px solid #2496ef;
     }
 
     .file {
@@ -97,25 +92,6 @@ export const Container = styled.div`
       padding: 10px 20px;
       margin-bottom: 20px;
       resize: none;
-    }
-
-    .button {
-      width: 100%;
-      margin-top: 20px;
-      background: #0848e7;
-      -webkit-box-shadow: 0px 0px 5px 0px rgba(8, 72, 231, 1);
-      -moz-box-shadow: 0px 0px 5px 0px rgba(8, 72, 231, 1);
-      box-shadow: 0px 0px 5px 0px rgba(8, 72, 231, 1);
-      border: transparent;
-      padding: 10px;
-      border-radius: 100px;
-      color: #fff;
-      transition: 0.2s;
-      max-width: 300px;
-
-      &:hover {
-        background: #0b80ed;
-      }
     }
   }
 `;

@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Titleimg from '../../assets/doctors.png';
+import H4 from '@material-tailwind/react/Heading4';
+import LeadText from '@material-tailwind/react/LeadText';
+import Titleimg from '../../assets/doctors2.jpg';
 
 import { Container } from './styles';
 
@@ -8,13 +10,12 @@ function Main() {
   return (
     <Container>
       <div>
-        <span>Secretaria de saúde</span>
-        <h1>Seja bem-vindo</h1>
-        <p>
+        <H4 color="blueGray">Seja bem-vindo</H4>
+        <LeadText color="blueGray">
           Use o menu de navegação em cima para navegar
           <br />
           pelo nosso novo site.
-        </p>
+        </LeadText>
       </div>
       <img src={Titleimg} alt="titleimg" />
     </Container>

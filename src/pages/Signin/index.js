@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
+import Button from '@material-tailwind/react/Button';
+import H2 from '@material-tailwind/react/Heading2';
 import { signInRequest } from '../../store/modules/auth/actions';
 
 import loginlogo from '../../assets/loginlogo.png';
@@ -29,7 +31,7 @@ export default function Signin() {
         <img src={loginlogo} alt="img" />
       </aside>
       <aside className="right">
-        <h1>Área de Acesso</h1>
+        <H2 color="lightBlue">Imprimir</H2>
 
         <Form autoComplete="off" onSubmit={handleSubmit} schema={schema}>
           <Input className="userimg" name="username" placeholder="Usuário" />
@@ -39,7 +41,18 @@ export default function Signin() {
             type="password"
             placeholder="Senha"
           />
-          <button type="submit">{loading ? 'Carregando...' : 'Acessar'}</button>
+
+          <Button
+            color="cyan"
+            buttonType="filled"
+            size="regular"
+            rounded={false}
+            block={false}
+            ripple="light"
+          >
+            {loading ? 'Carregando...' : 'Acessar'}
+          </Button>
+
           <Link to="/register">Não tenho conta</Link>
         </Form>
       </aside>

@@ -6,14 +6,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1300px;
   padding: 20px;
-  padding-top: 200px;
+  padding-top: 150px;
   flex-direction: column;
-
-  h1 {
-    font-size: 38px;
-  }
 
   .background {
     width: 100%;
@@ -26,10 +22,14 @@ export const Container = styled.div`
       width: 100%;
       color: #fff;
       text-align: center;
-      background: #0848e7;
+      background: #2496ef;
       border-radius: 10px;
       padding: 10px;
       margin-bottom: 20px;
+
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
     }
 
     div {
@@ -46,7 +46,7 @@ export const Container = styled.div`
       justify-content: space-between;
       width: 100%;
       padding: 8px;
-      border-bottom: 1px solid #0848e7;
+      border-bottom: 1px solid #2496ef;
 
       span {
         font-size: 14px;

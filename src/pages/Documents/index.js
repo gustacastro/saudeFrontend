@@ -3,12 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 import fileDownload from 'js-file-download';
+import H2 from '@material-tailwind/react/Heading2';
+import H6 from '@material-tailwind/react/Heading6';
 import api from '../../services/api';
 
 import { Container, Painel, LeftSide } from './styles';
-
-import save from '../../assets/save.svg';
-import printer from '../../assets/printer.svg';
 
 export default function Documents() {
   const [docsA, setDocs] = useState([]);
@@ -38,7 +37,7 @@ export default function Documents() {
 
   return (
     <Container>
-      <h1>Documentos</h1>
+      <H2 color="lightBlue">Documentos</H2>
       <div className="background">
         <Painel>
           {docsA.map((info, index) => (
@@ -51,14 +50,14 @@ export default function Documents() {
                       handleDownload(`${info.file.url}`, `${info.name}`);
                     }}
                   >
-                    <img src={save} alt="Download" width={22} />
+                    <span className="material-icons">save_alt</span>
                   </button>
                   <a href={info.file.url} target="_blank" rel="noreferrer">
-                    <img src={printer} alt="Imprimir" />
+                    <span className="material-icons">print</span>
                   </a>
                 </div>
                 <div className="div2">
-                  <span>{info.name}</span>
+                  <H6 color="blueGray">{info.name}</H6>
                 </div>
               </LeftSide>
             </div>

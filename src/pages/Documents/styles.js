@@ -1,19 +1,15 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   display: flex;
-  margin: 0 auto;
-  justify-content: center;
   align-items: center;
+  margin: 0 auto;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1300px;
   padding: 20px;
-  padding-top: 200px;
+  padding-top: 150px;
   flex-direction: column;
-
-  h1 {
-    font-size: 38px;
-  }
 
   .background {
     width: 100%;
@@ -24,26 +20,29 @@ export const Container = styled.div`
 `;
 
 export const Painel = styled.div`
+  margin: 0 auto;
   padding: 10px 0;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1300px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px 20px;
-  color: #404040;
 `;
 
 export const LeftSide = styled.li`
-  color: #404040;
   display: flex;
   padding: 5px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid #0848e7;
-  border-width: 2px 0px 2px 0px;
   text-decoration: none;
   font-size: 16px;
+  border-radius: 10px;
+  text-align: right;
+
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 
   button {
     padding: 0 5px;
@@ -54,26 +53,23 @@ export const LeftSide = styled.li`
   }
 
   a {
-    color: #404040;
     padding: 0 5px;
     background: none;
-    border-width: 0px;
-    font-size: 16px;
   }
-
-  div {
-    display: flex;
-    align-items: right;
-    justify-content: left;
-  }
-
   .div2 {
-    text-align: right;
-    display: flex;
-    align-items: right;
+    padding: 3px;
+  }
 
-    span {
-      font-size: 14px;
+  h1 {
+    font-size: 16px;
+    margin: auto 0;
+  }
+
+  .material-icons {
+    color: #2496ef;
+
+    &:hover {
+      color: ${darken(0.08, '#2496ef')};
     }
   }
 `;

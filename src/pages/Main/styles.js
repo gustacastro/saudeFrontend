@@ -12,17 +12,6 @@ export const Container = styled.div`
   max-height: 800px;
 
   img {
-    width: 50%;
-    height: 50%;
-  }
-
-  span {
-    color: #0b48ed;
-    font-weight: bold;
-  }
-
-  h1 {
-    font-weight: bold;
-    margin-bottom: 20px;
+    min-width: 50%;
   }
 `;

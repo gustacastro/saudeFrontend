@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   position: fixed;
@@ -15,6 +16,7 @@ export const Container = styled.div`
   .red {
     color: red;
     margin-right: 10px;
+    font-size: 40px;
   }
 
   .uppercase {
@@ -22,12 +24,12 @@ export const Container = styled.div`
   }
   .dashboard {
     .py-4 {
-      border: 1px solid red;
       border-radius: 10px;
       transition: 0.5s;
+      background: red;
 
       &:hover {
-        background: rgb(255, 0, 0, 0.8);
+        background: ${darken(0.03, 'red')};
       }
     }
   }

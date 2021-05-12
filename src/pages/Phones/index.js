@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
+import H2 from '@material-tailwind/react/Heading2';
 import api from '../../services/api';
 
 import { Container } from './styles';
@@ -28,7 +29,7 @@ export default function Phones() {
 
   return (
     <Container>
-      <h1>Telefones</h1>
+      <H2 color="lightBlue">Telefones</H2>
       <div className="background">
         <div className="table">
           <h1>Ramais</h1>
